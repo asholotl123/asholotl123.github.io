@@ -1,0 +1,105 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: "MV Boli";
+	line-height: 1.5em;
+
+}
+
+#site_wrap{
+	background-color:white;
+	height:100vh;
+	display:grid;
+	grid-template-columns:
+		1fr 
+		repeat(4,minmax(0,272px)) 		
+		1fr
+		;
+	grid-gap:5px;
+	grid-template-rows:
+		142px
+		min-content
+		min-content
+		294px
+		216px
+		1fr
+	;
+	grid-template-areas:
+		"header header header header header header"
+		". featured_main featured_main featured_main featured_profile ."
+		". content content content content ."
+		"featured_header featured_header featured_header featured_header featured_header featured_header"
+		"footer footer footer footer footer footer" 
+
+}
+
+.header{
+	background-color: white;
+	grid-area:header;
+	display:flex; 
+	align-items:center;
+	justify-content: space-between;
+}
+.header .logo{
+	width:119px;
+}
+.header .nav{
+	list-style: none;
+	padding:0;
+	display:flex;
+	width: 87%;
+
+}
+.header .nav a{
+	text-decoration:none;
+	border:5px solid #B3F7F6;
+	border-radius:50em;
+	color: #707070;
+	padding: 10px 43px;
+	margin:0 3.5px;
+	font-size: 20px;
+
+}
+.header .nav a:hover, .header .nav .active{
+	background-color: #707070;
+	color: white;
+}
+.featured_header{
+	background-image:url("FeaturedBanner.png");
+	grid-area:featured_header;
+	background-size: cover;
+	height:	160px;
+}
+.featured_profile{
+	padding: 0em 0em;
+	grid-area:featured_profile;
+}
+.content{
+	background-color: #F0F0F0;
+	grid-area:content;
+}
+.content h1{
+
+	color:#707070;
+}
+.content p{
+	color:#707070;
+	
+}
+.featured_main{
+	background-color: #F0F0F0;
+	grid-area:featured_main;
+
+}
+.featured_main h1{
+	color:#707070;
+}
+.featured_main p{
+	color:#707070;
+
+}
+.footer{
+	background-color: white;
+	grid-area:footer;
+	height: 100px;
+}
